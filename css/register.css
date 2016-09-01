@@ -1,0 +1,41 @@
+.register{
+    margin-top: 150px;
+}
+
+.sign{
+    padding-right: 1px;
+}
+
+.submit{
+    width: 297px;
+    background-color: #3F89EC;
+    color: white;
+}
+
+#block{
+    display: none;
+    line-height: 15px;
+    font-size: 10px;
+    padding-top: 3px;
+    color: #c0c0c0;
+}
+
+#list{
+    color:#c0c0c0 ;
+    font-size: 10px;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+#remind{
+    display: none;
+    border: solid thin gray;
+}
+
+#remind2{
+    display: none;
+    color:#c0c0c0 ;
+    font-size: 10px;
+    padding-left: 5px;
+    padding-top: 10px;
+}
