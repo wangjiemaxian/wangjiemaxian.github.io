@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>angular </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+</head>
+<body ng-app="wj" ng-controller="wangjieAngular">
+
+{{hello}}
+
+<img ng-src="{{githubUser.avatar_url}}" alt="">
+{{githubUser.name}}
+{{githubUser.bio}}
+
+<script>
+
+   /* angular.module('wj', [])
+            .controller('wangjieAngular', function($scope) {
+
+                $scope.hello = 'hello world';
+            });
+*/
+/*
+    function studentController($scope,$http) {
+        var url="data.txt";
+        $http.get(url).success( function(response) {
+            $scope.students = response;
+        });
+    }*/
+
+    angular.module('wj', [])
+            .controller('wangjieAngular', function($scope,$http) {
+                $http.get('https://api.github.com/users/wangjiemaxian').success( function(response) {
+                    debugger
+                    $scope.githubUser = response;
+                });
+                $scope.hello = 'hello world';
+            });
+
+</script>
+
+</body>
+</html>

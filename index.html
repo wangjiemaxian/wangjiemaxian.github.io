@@ -23,8 +23,7 @@
     <![endif]-->
 </head>
 <body>
-
-<div class="container-fluid">
+<div class="container-fluid" ng-app="wj" ng-controller="wangjieAngular">
     <div class="row">
         <div class="col-md-offset-3 col-md-6">
             <p>咚咚咚~~<span id="num1">胖</span>程程~~~~</p>
@@ -36,7 +35,12 @@
             <p>宝贝看你多荣幸收到我的第一个可以没有本地文件直接打开的页面~~~嘿嘿嘿(￣y▽￣)~*</p>
         </div>
         <div class="col-md-offset-3 col-md-6">
-            <img class="img-responsive img-circle center-block" src="images/cat.jpg" alt="cat">
+            <img class="img-responsive img-circle center-block" src="{{githubUser.avatar_url}}" alt="cat">
+        </div>
+        <div class="col-md-offset-3 col-md-6 text-center">
+           <h1>{{githubUser.name}}</h1>
+           <h2>{{githubUser.bio}}</h2>
+
         </div>
         <div class="col-md-offset-3 col-md-6">
             <button class="btn btn-primary btn-block" onclick="myFunction()">点我消除<span id="num2">"胖"</span>字</button>
@@ -45,9 +49,19 @@
     </div>
 </div>
 
-
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/bootstrap.min.js"></script>-->
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.js"></script>
+<script>
+    angular.module('wj', [])
+            .controller('wangjieAngular', function($scope,$http) {
+                $http.get('https://api.github.com/users/wangjiemaxian').success( function(response) {
+                    debugger
+                    $scope.githubUser = response;
+                });
+                $scope.hello = 'hello world';
+            });
+</script>
 </body>
 </html>

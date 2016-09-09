@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+</head>
+<script src="js/javas.js"></script>
+<body>
+
+<div class="cart-container">
+    <ul class="goods-list">
+        <li>
+            <img src="http://img10.360buyimg.com/cms/s80x80_jfs/t2167/289/1978572220/295799/46e22b18/568cb046Nd2b4557f.jpg"
+                 alt="">
+            <h3>钻石初音未来</h3>
+            <p>
+                <label>价格:</label><span>398.00</span>
+            </p>
+            <p>
+                <label>数量:</label><input type="text" name="goodsQuantity" value="1">
+            </p>
+        </li>
+        <li>
+            <img src="http://img10.360buyimg.com/cms/s80x80_jfs/t2692/153/1876521168/85191/3dcc2a66/574d8cfbNb5351b08.jpg"
+                 alt="">
+            <h3>1/4 vocaloid miku V3</h3>
+            <p>
+                <label>价格:</label><span>598.00</span>
+            </p>
+            <p>
+                <label>数量:</label><input type="text" name="goodsQuantity" value="2">
+            </p>
+        </li>
+    </ul>
+    <div class="total">
+        <h2>一共<span>6</span>个商品, 总价 <span>1981</span> 元</h2>
+    </div>
+</div>
+
+<script>
+
+    var goodsList = [{
+        name: '钻石初音未来',
+        photo: 'http://img10.360buyimg.com/cms/s80x80_jfs/t2167/289/1978572220/295799/46e22b18/568cb046Nd2b4557f.jpg',
+        price: '398',
+        quantity: 1
+    }, {
+        name: '1/4 vocaloid miku V3',
+        photo: 'http://img10.360buyimg.com/cms/s80x80_jfs/t2692/153/1876521168/85191/3dcc2a66/574d8cfbNb5351b08.jpg',
+        price: '598',
+        quantity: 2
+    }];
+
+
+    var newGoods = {
+        name: '赛车娘骑士初音 可动',
+        photo: 'http://img10.360buyimg.com/cms/s80x80_jfs/t3004/73/2096691160/253330/e4167fb9/57d22590Nd4b02973.jpg',
+        price: '129',
+        quantity: 3
+    }
+
+</script>
+
+</body>
+</html>
